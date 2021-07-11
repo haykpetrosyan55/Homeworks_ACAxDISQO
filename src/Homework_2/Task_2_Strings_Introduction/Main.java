@@ -1,30 +1,15 @@
-package homework_2.Strings_Introduction;
+package Homework_2.Task_2_Strings_Introduction;
 
 import java.util.Scanner;
 
 public class Main {
 
     private static String isGreater(String a, String b) {
-        String isGreat;
-        int size;
-
-        if (a.length() > b.length()) {
-            size = b.length();
-            isGreat = "Yes";
+        if (a.compareTo(b) > 0) {
+            return  "Yes";
         } else {
-            size = a.length();
-            isGreat = "No";
+            return  "No";
         }
-
-        for (int i = 0; i < size; i++) {
-            if(a.charAt(i) > b.charAt(i)){
-                return "Yes";
-            }else if(a.charAt(i) < b.charAt(i)){
-                return "No";
-            }
-        }
-
-        return isGreat;
     }
 
     private static String capTheFirst(String a, String b){
@@ -40,6 +25,5 @@ public class Main {
         System.out.println(A.length() + B.length());
         System.out.println(isGreater(A, B));
         System.out.println(capTheFirst(A, B));
-
     }
 }
