@@ -1,4 +1,4 @@
-package homework_0.Task1;
+package Homework_0.Task1;
 
 //Task 1
 //Design a class named Point

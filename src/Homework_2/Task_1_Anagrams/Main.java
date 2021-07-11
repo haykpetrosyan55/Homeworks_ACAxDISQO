@@ -1,5 +1,6 @@
-package homework_2.anagrams;
+package Homework_2.Task_1_Anagrams;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -10,18 +11,12 @@ public class Main {
         }
         a = a.toUpperCase();
         b = b.toUpperCase();
-        StringBuilder sb = new StringBuilder(b);
-        for (int i = 0; i < a.length(); i++) {
-            for (int j = 0; j < sb.length(); j++) {
-                if(a.charAt(i) == sb.charAt(j)){
-                    sb = sb.deleteCharAt(j);
-                    break;
-                }
-            }
-        }
-        return sb.length() == 0;
+        char [] aArr = a.toCharArray();
+        char [] bArr = b.toCharArray();
+        Arrays.sort(aArr);
+        Arrays.sort(bArr);
+        return Arrays.equals(aArr, bArr);
     }
-
 
     public static void main(String[] args) {
 
